@@ -175,7 +175,7 @@ class BetterWarps extends PluginBase implements Listener{
                 $warps = new Config($this->getDataFolder() . "Warps.yml", Config::YAML);
                 $warpName = $response->getInt("warps");
 
-                if ($warpName == null){
+                if (!is_numeric($warpName)){
                     $submitter->sendMessage("§l§cERROR: §r§aYou selected an invalid warp");
                     return;
                 }
