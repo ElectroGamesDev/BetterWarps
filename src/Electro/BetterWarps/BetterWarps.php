@@ -94,6 +94,15 @@ class BetterWarps extends PluginBase implements Listener{
             switch($cmd->getName())
             {
                 case strtolower($warp["Name"]):
+                    if (!$this->getServer()->getWorldManager()->isWorldGenerated($warp["Level"]))
+                    {
+                        $sender->sendMessage("§c§lERROR: §r§aThe world this warp is in does not exist");
+                        return true;
+                    }
+                    if (!$this->getServer()->getWorldManager()->isWorldLoaded($warp["Level"]))
+                    {
+                        $this->getServer()->getWorldManager()->loadWorld($warp["Level"]);
+                    }
                     $sender->teleport(new Position($warp["X"], $warp["Y"], $warp["Z"], $this->getServer()->getWorldManager()->getWorldByName($warp["Level"])));
                     $sender->sendMessage("§aYou have warped to " . $warp["Name"] . "!");
             }
