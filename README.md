@@ -1,5 +1,6 @@
 # Information 
-- BetterWarps is unique compared to other warp plugins. Warps are registered as commands so to teleport to a warp, players use "/warpName" instead of "/warp warpName".
+- BetterWarps is unique compared to other warp plugins.
+- Warps are registered as commands so to teleport to a warp, players use "/warpName" instead of "/warp warpName".
 # Features
 - Warps are registered as commands
 - Warps can require permissions
