@@ -1,0 +1,19 @@
+name: BetterWarps
+version: 1.0.0
+main: Electro\BetterWarps\BetterWarps
+api: 4.0.0
+author: Electro
+
+commands:
+  warp:
+    usage: /warp <create/remove>
+    description: Create/Remove a Warp
+    permission: betterwarps.cmd
+
+permissions:
+  betterwarps.cmd:
+    description: Permission to manage warps
+    default: op
+  betterwarps.warp:
+    description: Permission to warp
+    default: true
