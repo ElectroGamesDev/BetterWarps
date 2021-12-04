@@ -73,7 +73,6 @@ class BetterWarps extends PluginBase implements Listener{
                         {
                             $sender->sendMessage("§a " . $warp["Name"]);
                         }
-                        return true;
                         break;
                     case "del":
                     case "delete":
