@@ -205,7 +205,7 @@ class BetterWarps extends PluginBase implements Listener{
         $command->setDescription($description);
         $command->setPermission($permission);
         $command->setUsage($usage);
-        $this->getServer()->getCommandMap()->register($name, $command);
+        $this->getServer()->getCommandMap()->register("betterwarps", $command);
     }
 
     public function unregisterWarp($name, $permission)
